@@ -3,3 +3,7 @@ export function roll() {
   const max = Math.floor(7);
   return Math.floor(Math.random() * (max-min) + min);
 }
+
+export function Player() {
+  
+}

@@ -1,4 +1,5 @@
 import { roll } from "./../src/pigdice.js";
+import { Player } from "./../src/pigdice.js";
 
 describe("roll", () => {
 
@@ -7,4 +8,12 @@ describe("roll", () => {
     expect(value).toBeGreaterThanOrEqual(1);
     expect(value).toBeLessThanOrEqual(6);
   });
+});
+
+describe("Player", () => {
+  
+    test("should create player object", () => {
+      let player = new Player();
+      expect(player).toBeDefined();
+    });
 });

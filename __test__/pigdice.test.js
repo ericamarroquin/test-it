@@ -16,4 +16,18 @@ describe("Player", () => {
       let player = new Player();
       expect(player).toBeDefined();
     });
+
+    test("should create player object with start up properties", () => {
+      let player = new Player();
+      expect(player.tempScore).toEqual(0);
+    });
 });
+
+
+
+
+
+
+// test("", () => {
+      
+// })

@@ -11,3 +11,8 @@ export function Player() {
   this.rolls = 0;
   this.currentPlayer = true;
 };
+
+Player.prototype.play = function() {
+  const playerRoll = roll();
+  this.tempScore += playerRoll;
+};

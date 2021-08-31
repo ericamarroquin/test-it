@@ -21,8 +21,6 @@ describe("Player", () => {
       let player = new Player();
       expect(player.tempScore).toEqual(0);
       expect(player.totalScore).toEqual(0);
-      expect(player.turn).toEqual(0);
-      expect(player.rolls).toEqual(0);
       expect(player.currentPlayer).toEqual(true);
     });
     
@@ -31,6 +29,12 @@ describe("Player", () => {
       player.play();
       expect(player.tempScore).toBeGreaterThanOrEqual(1);
       expect(player.tempScore).toBeLessThanOrEqual(6);
+    });
+
+    test("toggle currentPlayer to false if rolled a 1", () => {
+      let player = new Player();
+      player.play();
+      expect(player.currentPlayer).toEqual(false);
     });
 });
 

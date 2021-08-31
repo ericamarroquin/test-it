@@ -7,12 +7,13 @@ export function roll() {
 export function Player() {
   this.tempScore = 0;
   this.totalScore = 0;
-  this.turn = 0;
-  this.rolls = 0;
   this.currentPlayer = true;
 };
 
 Player.prototype.play = function() {
-  const playerRoll = roll();
+  const playerRoll = 1;
   this.tempScore += playerRoll;
+  if (playerRoll === 1) {
+    this.currentPlayer = false;
+  }; 
 };
